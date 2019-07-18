@@ -1,27 +1,21 @@
-
 <mat-drawer-container class="menu-container">
-    <mat-toolbar>
-        <span>My Application</span>
-      </mat-toolbar>
-    <mat-drawer mode="side" over #menu opened>
+  <mat-toolbar>
+      <button mat-icon-button (click)="menu.toggle()" [ngStyle]="{'display' : (screenWidth > 840) ? 'none' : 'block'}">
+          <mat-icon>menu</mat-icon>
+        </button>
+    <span>My Application</span>
+  </mat-toolbar>
+  <mat-drawer mode="over" #menu closed [opened]="screenWidth > 840" [mode]="(screenWidth > 840) ? 'side' : 'over'">
+    Cadastro de Empresas
 
-        Cadastro de Empresas
-
-        <ul>
-          <li>
-            <a [routerLink]="['/cadastro-empresa']" routerLinkActive="router-link-active" >Cadastrar Empresa</a>
-          </li>
-          <li>
-            <a [routerLink]="['/lista-empresa']" routerLinkActive="router-link-active" >Empresas Cadastradas</a>
-          </li>
-        </ul>
-
-      </mat-drawer>
-      <button mat-icon-button (click)="menu.toggle()"><mat-icon>mail</mat-icon></button>
-      <router-outlet></router-outlet>
-
-
-      <mat-card-footer >
-          <span>My Application</span>
-        </mat-card-footer>
-      </mat-drawer-container>
+    <ul>
+      <li>
+        <a [routerLink]="['/cadastro-empresa']" routerLinkActive="router-link-active">Cadastrar Empresa</a>
+      </li>
+      <li>
+        <a [routerLink]="['/lista-empresa']" routerLinkActive="router-link-active">Empresas Cadastradas</a>
+      </li>
+    </ul>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>

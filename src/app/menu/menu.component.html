@@ -1,21 +1,41 @@
 <mat-drawer-container class="menu-container">
   <mat-toolbar>
-      <button mat-icon-button (click)="menu.toggle()" [ngStyle]="{'display' : (screenWidth > 840) ? 'none' : 'block'}">
-          <mat-icon>menu</mat-icon>
-        </button>
+    <button mat-icon-button (click)="menu.toggle()" [ngStyle]="{'display' : (screenWidth > 840) ? 'none' : 'block'}">
+      <mat-icon>menu</mat-icon>
+    </button>
     <span>My Application</span>
   </mat-toolbar>
-  <mat-drawer mode="over" #menu closed [opened]="screenWidth > 840" [mode]="(screenWidth > 840) ? 'side' : 'over'">
-    Cadastro de Empresas
 
-    <ul>
-      <li>
-        <a [routerLink]="['/cadastro-empresa']" routerLinkActive="router-link-active">Cadastrar Empresa</a>
-      </li>
-      <li>
-        <a [routerLink]="['/lista-empresa']" routerLinkActive="router-link-active">Empresas Cadastradas</a>
-      </li>
-    </ul>
+
+
+  <mat-drawer mode="over" #menu opened [opened]="screenWidth > 840" [mode]="(screenWidth > 840) ? 'side' : 'over'">
+    <div>
+      <mat-list>
+        <ul>
+          <li>
+            <a class="link" mat-flat-button [routerLink]="['/lista-empresa']" routerLinkActive="router-link-active">
+              <mat-icon>account_circle</mat-icon>  Dashboard
+            </a>
+          </li>
+          <li>
+            <a class="link" mat-flat-button [routerLink]="['/cadastro-empresa']" routerLinkActive="router-link-active">
+              <mat-icon>note_add</mat-icon>  Cadastrar Empresa
+            </a>
+          </li>
+          <li>
+            <a class="link" mat-flat-button [routerLink]="['/lista-empresa']" routerLinkActive="router-link-active">
+              <mat-icon>receipt</mat-icon>  Empresas Cadastradas
+            </a>
+          </li>
+        </ul>
+        <button mat-button class="link">
+            <mat-icon>power_settings_new</mat-icon>  Sair
+          </button>
+      </mat-list>
+
+
+    </div>
+
   </mat-drawer>
   <router-outlet></router-outlet>
 </mat-drawer-container>

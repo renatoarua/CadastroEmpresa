@@ -8,7 +8,11 @@ import {
   MatInputModule,
   MatButtonModule,
   MatIconModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatDivider,
+  MatList,
+  MatDividerModule,
+  MatListModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,7 +41,9 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

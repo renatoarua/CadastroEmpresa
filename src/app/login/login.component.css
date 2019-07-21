@@ -1,0 +1,16 @@
+.container {
+  width: 100vw;
+  height: 57vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 6px 6px 9px #948a8a;
+  padding: 3vh 3vw;
+}

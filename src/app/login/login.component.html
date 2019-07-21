@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="box">
+
+    <h1>Cadastro de Empresa</h1>
+
+    <mat-form-field>
+      <mat-label for="txtCPF">CPF</mat-label>
+      <input matInput id="txtCPF" mask="{99-99}">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label for="txtSenha">SENHA</mat-label>
+      <input matInput id="txtSenha" type="password">
+    </mat-form-field>
+
+
+    <button mat-raised-button (click)="logar()">
+      <mat-icon>done</mat-icon> Entrar
+    </button>
+
+  </div>
+</div>

@@ -22,4 +22,8 @@ constructor() {
   ngOnInit() {
   }
 
+  logar() {
+    localStorage.setItem('Logado', JSON.stringify(false));
+  }
+
 }

@@ -7,9 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CadastroEmpresa';
-  logado = true;
+  logado = false;
 
   ngOnInit() {
+
+    this.mostrarMenu();
+
+  }
+
+
+
+  mostrarMenu() {
 
     this.logado = JSON.parse(localStorage.getItem('Logado'));
 
